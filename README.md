@@ -5,8 +5,17 @@
 ### Página 1
 
 **Errores encontrados:**
+- El documento estaba configurado con `lang="en"`, aunque su contenido estaba escrito en español.
+- Se utilizaba el atributo `border="1"` en las tablas, considerado obsoleto por el estándar HTML.
+- Se utilizo el atributo `center` en imagenes y la tabla, considerado obsoleto por el estandar HTML.
+- Se utilizaba `p` en listas `ol` y `ul`, este atributo no es aceptado en las listas mencionadas. 
 
 **Correcciones realizadas:**
+- Se cambió `lang="en"` por `lang="es"` para indicar que la página está escrita en español.
+- Se eliminó el atributo `border="1"` de las tablas.
+- Se eliminó el atributo `center` de las imagenes y la tabla.
+- se elimino el atributo `p` de las listas en las que se presentaba.
+
 
 ### Página 2
 
