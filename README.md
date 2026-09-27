@@ -199,5 +199,23 @@ La prueba permitió comprobar cómo la especificidad influye en qué regla CSS t
 
 Después de realizar la prueba, los estilos utilizados exclusivamente para experimentar fueron retirados del CSS final del proyecto.
 
+### Página 3
 
+**Errores encontrados:**
+
+* El validador CSS del W3C presentó un error al intentar acceder al archivo css/styles.css mediante una ruta local (file://localhost/css/styles.css), mostrando el mensaje Operation not permitted.
+
+**Advertencias encontradas:**
+
+* El elemento <link> utilizado para enlazar la hoja de estilos no tenía especificado el atributo type con el valor text/css.
+
+**Correcciones realizadas:**
+
+* Se agregó el atributo type="text/css" al elemento <link> encargado de enlazar la hoja de estilos CSS.
+
+* Se verificó que la ruta utilizada para enlazar el archivo styles.css fuera correcta de acuerdo con la estructura del proyecto: css/styles.css.
+
+* Se verificó que el archivo styles.css no utilizara reglas @import que pudieran generar problemas adicionales al momento de validar la hoja de estilos.
+
+El error Operation not permitted corresponde al acceso del validador al archivo CSS mediante una ruta local. La ruta utilizada en el proyecto es correcta debido a que el archivo styles.css se encuentra dentro de la carpeta css, al mismo nivel que tema3.html.
 
