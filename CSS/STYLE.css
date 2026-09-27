@@ -1,0 +1,153 @@
+/* =========================
+   PALETA DE COLORES
+   ========================= */
+
+:root {
+    --color-primary: #1772e2;
+    --color-secondary: #b0bac4;
+    --color-accent: #938975;
+    --color-bg: #8fb3ea7d;
+    --color-surface: #050101;
+    --color-text: #7f8082;
+}
+
+
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+.site-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.site-header__title {
+    margin: 0;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+   ========================= */
+
+.main-nav {
+    background-color: var(--color-surface);
+    padding: 1rem;
+}
+
+.main-nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+
+.site-main {
+    width: min(1100px, 92%);
+    margin: 2rem auto;
+}
+
+
+/* =========================
+   SECCIONES
+   ========================= */
+
+.topic-section {
+    background-color: var(--color-surface);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.topic-section h2 {
+    color: var(--color-primary);
+}
+
+
+/* =========================
+   TABLAS
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #d0d7de;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
+/* =========================
+   IMÁGENES
+   ========================= */
+
+figure {
+    margin: 1rem 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   ENLACES
+   ========================= */
+
+a {
+    color: var(--color-secondary);
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+.site-footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
