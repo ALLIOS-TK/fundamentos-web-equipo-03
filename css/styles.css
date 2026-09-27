@@ -1,17 +1,30 @@
+<<<<<<< HEAD:CSS/STYLE.css
+=======
 
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
 :root {
-    --color-primary: #17365d;
+    --color-primary: #091d34;
+    --color-primary-light: #123b63;
     --color-secondary: #2f75b5;
     --color-accent: #0f6b78;
-    --color-bg: #f7f9fc;
+    --color-accent-light: #d9f0f2;
+    --color-bg: #eef3f8;
     --color-surface: #ffffff;
-    --color-text: #1f2937;
-    --color-border: #d0d7de;
+    --color-surface-alt: #e4ebf2;
+    --color-text: #17212b;
+    --color-text-light: #526170;
+    --color-border: #cbd5df;
+    --shadow: 0 5px 18px rgba(9, 29, 52, 0.10);
+    --shadow-hover: 0 8px 25px rgba(9, 29, 52, 0.16);
+    --radius: 12px;
 }
 
+<<<<<<< HEAD:CSS/STYLE.css
+=======
 
 
 
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
 * {
     box-sizing: border-box;
 }
@@ -23,7 +36,7 @@ html {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     background-color: var(--color-bg);
     color: var(--color-text);
 }
@@ -33,51 +46,72 @@ img {
     height: auto;
 }
 
+<<<<<<< HEAD:CSS/STYLE.css
+header {
+    background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary-light)
+    );
+=======
 
 
 
 .site-header {
     background-color: var(--color-primary);
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
     color: white;
-    padding: 2rem 1rem;
+    padding: 55px 20px;
     text-align: center;
+    box-shadow: var(--shadow);
 }
 
-.site-header__title {
-    margin: 0;
-    font-size: 2.2rem;
+header h1 {
+    margin: 0 0 15px;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.site-header__intro {
-    max-width: 900px;
-    margin: 1rem auto 0;
+header p {
+    max-width: 950px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #e8f0f7;
 }
 
-
-/* =========================
-   NAVEGACIÓN
-   ========================= */
-
-.main-nav {
-    background-color: var(--color-surface);
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid var(--color-border);
-}
-
-.main-nav a {
-    color: var(--color-primary);
-    text-decoration: none;
-    margin: 0 0.7rem;
+header em {
+    color: #8ee5ea;
     font-weight: bold;
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
-    color: var(--color-secondary);
-    text-decoration: underline;
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    margin: 0;
 }
 
+<<<<<<< HEAD:CSS/STYLE.css
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+    display: inline-block;
+    padding: 9px 14px;
+=======
 .main-nav a:focus {
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
@@ -102,80 +136,200 @@ img {
 }
 
 .topic-section h2 {
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
     color: var(--color-primary);
-    border-bottom: 2px solid var(--color-accent);
-    padding-bottom: 0.5rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
-.topic-section h3 {
-    color: var(--color-secondary);
+nav a:hover,
+nav a:focus {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
 }
 
+<<<<<<< HEAD:CSS/STYLE.css
+main {
+    width: min(1100px, 92%);
+    margin: 40px auto;
+=======
 
 
 .topic-section li {
     margin-bottom: 0.6rem;
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
 }
 
+section {
+    background-color: var(--color-surface);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
 
+<<<<<<< HEAD:CSS/STYLE.css
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--color-accent);
+}
+
+section h3 {
+    color: var(--color-primary);
+}
+
+p {
+    color: var(--color-text);
+}
+
+section p {
+    text-align: justify;
+}
+
+strong {
+    color: var(--color-primary);
+}
+
+em {
+    color: var(--color-accent);
+}
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+li strong {
+    color: var(--color-accent);
+}
+=======
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
 
 table {
     width: 100%;
+    margin: 30px 0;
     border-collapse: collapse;
-    margin: 1.5rem 0;
-    background-color: var(--color-surface);
+    background-color: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+caption {
+    padding: 15px;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 th,
 td {
+    padding: 14px;
     border: 1px solid var(--color-border);
-    padding: 0.75rem;
-    text-align: left;
+    text-align: center;
 }
 
 th {
     background-color: var(--color-primary);
     color: white;
+    font-size: 0.95rem;
 }
 
-tr:nth-child(even) {
+td {
+    background-color: white;
+}
+
+tr:nth-child(even) td {
     background-color: #f1f5f9;
 }
 
+<<<<<<< HEAD:CSS/STYLE.css
+tr:hover td {
+    background-color: var(--color-accent-light);
+}
+=======
 
 
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
 
 figure {
-    margin: 1.5rem auto;
+    margin: 30px auto;
     text-align: center;
 }
 
 figure img {
     display: block;
+    width: auto;
     max-width: 90%;
     margin: 0 auto;
-    border-radius: 0.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
+details {
+    margin: 15px 0;
+    padding: 15px 18px;
+    background-color: var(--color-surface-alt);
+    border-left: 5px solid var(--color-accent);
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 
+details:hover {
+    background-color: var(--color-accent-light);
+}
 
-/* =========================
-   ENLACES
-   ========================= */
+summary {
+    cursor: pointer;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+details a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--color-secondary);
+    word-break: break-word;
+}
 
 a {
     color: var(--color-secondary);
 }
 
-.topic-section a {
-    color: var(--color-secondary);
+a:hover {
+    color: var(--color-accent);
 }
 
+<<<<<<< HEAD:CSS/STYLE.css
+main + hr + section {
+    width: min(1100px, 92%);
+    margin: 0 auto 40px;
+    padding: 25px;
+=======
 
 
 details {
@@ -193,51 +347,122 @@ summary {
 
 
 .site-footer {
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
     background-color: var(--color-primary);
     color: white;
-    padding: 1.5rem;
-    margin-top: 2rem;
+    border: none;
+    border-radius: var(--radius);
     text-align: center;
+    box-shadow: var(--shadow);
 }
 
-.site-footer h3 {
+main + hr + section h3 {
     margin-top: 0;
-}
-
-.site-footer a {
     color: white;
-    margin: 0 0.5rem;
+    font-size: 1.3rem;
 }
 
+<<<<<<< HEAD:CSS/STYLE.css
+main + hr + section nav {
+    position: static;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+=======
 
 
 hr {
     border: 0;
     border-top: 1px solid var(--color-border);
     margin: 2rem 0;
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
 }
 
+main + hr + section nav a {
+    color: white;
+    background-color: var(--color-primary-light);
+}
 
+<<<<<<< HEAD:CSS/STYLE.css
+main + hr + section nav a:hover {
+    background-color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 35px 15px;
+=======
 @media (max-width: 700px) {
 
     .site-header__title {
         font-size: 1.7rem;
+>>>>>>> 48323b9fa25b6c36c48c3a73984834846ad85d7e:css/styles.css
     }
 
-    .main-nav a {
-        display: block;
-        margin: 0.5rem 0;
+    header h1 {
+        font-size: 1.9rem;
+        letter-spacing: 2px;
     }
 
-    .site-main {
+    header p {
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    nav {
+        position: static;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
         width: 94%;
+        margin: 20px auto;
     }
 
-    .topic-section {
-        padding: 1rem;
+    section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        text-align: left;
+    }
+
+    ul,
+    ol {
+        padding-left: 20px;
     }
 
     table {
-        font-size: 0.9rem;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+
+    main + hr + section {
+        width: 94%;
+        margin-bottom: 25px;
     }
 }
