@@ -17,6 +17,8 @@
 - se elimino el atributo `p` de las listas en las que se presentaba.
 
 
+
+
 ### Página 2
 
 **Errores encontrados:**
@@ -71,6 +73,98 @@
 * Se eliminó el atributo `border="1"` de las tablas.
 * Se eliminó el atributo `center` de las imágenes y la tabla.
 * Se eliminó el atributo `p` de las listas en las que se presentaba.
+
+### Convención CSS
+
+Para el proyecto se utiliza una convención de nombres en inglés, escrita en minúsculas y utilizando el formato kebab-case. También se utiliza la metodología BEM para organizar los elementos relacionados.
+
+Algunos de los nombres de clases definidos en el proyecto son:
+
+.site-header
+.site-header__title
+.site-header__intro
+.main-nav
+.site-main
+.topic-section
+.site-footer
+
+### Paleta de color
+
+La página de Ciberseguridad utiliza principalmente una paleta basada en tonos azules y colores neutros, buscando proporcionar una apariencia relacionada con el ámbito tecnológico y facilitar la lectura del contenido.
+
+Los colores principales definidos originalmente mediante variables CSS son:
+
+Primary: #091d34
+Secondary: #2f75b5
+Accent: #0f6b78
+Background: #f1f5f9
+Surface: #c7d3df
+Text: #000000
+Border: #000000
+
+### Prueba de cascada
+
+Se puede realizar una prueba temporal para comprobar cómo funcionan la cascada y la especificidad de los selectores CSS.
+
+Para la prueba se puede utilizar un elemento con un selector de elemento, una clase y un ID:
+
+<h2 id="demo-title" class="demo-title">
+    Prueba de cascada
+</h2>
+
+se realizo con estas reglas:
+h2 {
+    color: blue;
+}
+
+.demo-title {
+    color: green;
+}
+
+#demo-title {
+    color: purple;
+}
+
+estilo en linea:
+<h2 id="demo-title" class="demo-title" style="color: orange;">
+    Prueba de cascada
+</h2>
+
+### Resultados de la prueba:
+* El selector de elemento h2 tiene menor especificidad.
+* El selector de clase .demo-title tiene mayor especificidad que el selector de elemento.
+* El selector de ID #demo-title tiene mayor especificidad que el selector de clase.
+* El estilo en línea tiene prioridad sobre los selectores anteriores en esta prueba.
+
+La prueba permite comprobar cómo la especificidad influye en la regla CSS que termina aplicándose cuando existen varias reglas dirigidas al mismo elemento.
+
+### Validación CSS
+**Errores encontrados:**
+* La estructura original del documento HTML presentaba una organización incorrecta de las etiquetas <html>, <head> y <body>, lo que podía afectar la correcta interpretación del documento y de la hoja de estilos.
+* El archivo HTML enlazaba la hoja de estilos mediante <link rel="stylesheet" href="css/style.css">, pero el enlace se encontraba fuera del elemento <head>.
+**Advertencias encontradas:**
+* La etiqueta <link> utilizada para enlazar la hoja de estilos no especificaba el atributo type="text/css". Actualmente, para una hoja de estilos CSS convencional, este atributo no es necesario, pero puede aparecer como recomendación dependiendo del validador utilizado.
+* La hoja CSS contiene clases como .site-header, .main-nav, .site-main y .topic-section que originalmente no estaban asociadas a los elementos del HTML.
+**Correcciones realizadas:**
+* Se ubicó correctamente el elemento <link> dentro de <head>.
+* Se reorganizó el documento para utilizar la estructura:
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    ...
+</head>
+
+<body>
+    ...
+</body>
+
+</html>
+* Se verificó que la ruta de la hoja de estilos corresponda con la estructura del proyecto:
+css/style.css
+* Se reorganizaron los selectores CSS para que correspondan con los elementos que realmente existen en el HTML.
+* Se mantuvieron las variables CSS utilizadas para definir la paleta de colores, facilitando la modificación global del diseño.
+* Se mantuvieron las referencias utilizadas en la página, correspondientes a IBM y Microsoft, relacionadas con los contenidos de ciberseguridad.
 
 ### Página 2
 
